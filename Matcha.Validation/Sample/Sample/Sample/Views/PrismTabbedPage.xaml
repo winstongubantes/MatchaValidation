@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage
+    x:Class="Sample.Views.PrismTabbedPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:converter="clr-namespace:Sample.Converter;assembly=Sample"
+    xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+    prism:ViewModelLocator.AutowireViewModel="True">
+    <TabbedPage.Resources>
+        <ResourceDictionary>
+            <converter:InverseBooleanConverter x:Key="BooleanConverter" />
+        </ResourceDictionary>
+    </TabbedPage.Resources>
+    <ContentPage Title="Built-In Validation">
+        <StackLayout Padding="30">
+            <Entry Placeholder="Username" Text="{Binding UserName}" />
+            <Label
+                FontSize="Micro"
+                IsVisible="{Binding EntryNotEmptyRule.IsValid, Converter={StaticResource BooleanConverter}}"
+                Text="{Binding EntryNotEmptyRule.ValidationMessage}"
+                TextColor="Red" />
+            <Entry
+                IsPassword="True"
+                Placeholder="Password"
+                Text="{Binding Password}" />
+            <Label
+                FontSize="Micro"
+                IsVisible="{Binding EntryPassRule.IsValid, Converter={StaticResource BooleanConverter}}"
+                Text="{Binding EntryPassRule.ValidationMessage}"
+                TextColor="Red" />
+            <Button
+                Command="{Binding ValidateBuilInCommand}"
+                IsEnabled="{Binding ValidationService.IsValid}"
+                Text="Validate" />
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="Custom Validation">
+        <StackLayout>
+            <Entry Placeholder="Username" Text="{Binding UserName}" />
+        </StackLayout>
+    </ContentPage>
+</TabbedPage>
