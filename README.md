@@ -2,7 +2,7 @@
 A plugin library for unobtrusive (pure) validation that works well with any MVVM framework  
  
  ## Preview
- ![alt text]( "Sample In Action")
+ ![alt text](https://github.com/winstongubantes/matcha.validation/blob/master/Images/valid.gif "Sample In Action")
 
  
  ### Get Started
