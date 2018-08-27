@@ -15,7 +15,7 @@ namespace Matcha.Validation
                 @"((^(http[s]?:\/\/)?([w]{3}[.])?(([a-z0-9\.]+)+(com|php))(((\/[a-z0-9]+)*(\/[a-z0-9]+\/?))*([a-z0-9]+[.](html|php|gif|png|jpg))?)$)|((^([.]\/)?((([a-z0-9]+)\/?)+|(([a-z0-9]+)\/)+([a-z0-9]+[.](html|php|gif|png|jpg))))$))");
             var match = regex.Match(value);
 
-            return IsValid = match.Success;
+            return match.Success;
         }
     }
 }

@@ -9,7 +9,7 @@
 
         protected override bool CheckValue(double value)
         {
-            return IsValid = value > 0;
+            return value > 0;
         }
     }
 }

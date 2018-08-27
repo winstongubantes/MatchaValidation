@@ -18,7 +18,7 @@ namespace Matcha.Validation
             var regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
             var match = regex.Match(str ?? throw new InvalidOperationException());
 
-            return IsValid = match.Success;
+            return match.Success;
         }
     }
 }

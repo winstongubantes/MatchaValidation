@@ -75,7 +75,7 @@ namespace Matcha.Validation
                 }
 
             HasChanges = true;
-            IsValid = Validate();
+            IsValid = _validationRules.All(x => x.IsValid);
         }
 
         private bool Validate()

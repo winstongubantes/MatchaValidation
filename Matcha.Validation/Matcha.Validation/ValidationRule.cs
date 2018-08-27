@@ -26,7 +26,7 @@
 
         public bool Check(object value)
         {
-            return CheckValue((T) value);
+            return IsValid = CheckValue((T) value);
         }
 
         protected abstract bool CheckValue(T value);

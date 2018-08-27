@@ -18,7 +18,7 @@
         protected override bool CheckValue(string value)
         {
             if (value == null) return IsValid = false;
-            return IsValid = MatchedValue == value;
+            return MatchedValue == value;
         }
     }
 }

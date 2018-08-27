@@ -9,7 +9,7 @@
 
         protected override bool CheckValue(string value)
         {
-            return IsValid = !string.IsNullOrWhiteSpace(value);
+            return !string.IsNullOrWhiteSpace(value);
         }
     }
 }

@@ -26,19 +26,15 @@ namespace Matcha.Validation
         public PasswordScore Score
         {
             get => _score;
-            set
-            {
-                SetProperty(ref _score, value);
-                RaisePropertyChanged(nameof(ScoreLabel));
-            }
+            set => SetProperty(ref _score, value);
         }
-
-        public string ScoreLabel => GetScoreLabel();
 
         protected override bool CheckValue(string value)
         {
             Score = CheckStrength(value);
-            return (int)Score <= 2;
+            ValidationMessage = GetScoreLabel();
+            var scoreVal = (int) Score;
+            return scoreVal > 2;
         }
 
         private string GetScoreLabel()
@@ -65,21 +61,25 @@ namespace Matcha.Validation
         {
             int score = 0;
 
+            if(string.IsNullOrWhiteSpace(password)) return PasswordScore.Blank;
+
             if (password.Length < 1)
                 return PasswordScore.Blank;
             if (password.Length < 4)
                 return PasswordScore.VeryWeak;
+            if (password.Length < 8)
+                return PasswordScore.Weak;
             if (password.Length >= 8)
-                score++;
+                return PasswordScore.Medium;
             if (password.Length >= 12)
-                score++;
+                return PasswordScore.Strong;
             if (Regex.IsMatch(password, @"[\d]", RegexOptions.ECMAScript))
-                score++;
+                return PasswordScore.Strong;
             if (Regex.IsMatch(password, @"[a-z]", RegexOptions.ECMAScript) ||
                 Regex.IsMatch(password, @"[A-Z]", RegexOptions.ECMAScript))
-                score++;
+                return PasswordScore.VeryStrong;
             if (Regex.IsMatch(password, @"[~`!@#$%\^\&\*\(\)\-_\+=\[\{\]\}\|\\;:'\""<\,>\.\?\/£]", RegexOptions.ECMAScript))
-                score++;
+                return PasswordScore.VeryStrong;
 
             return (PasswordScore)score;
         }
