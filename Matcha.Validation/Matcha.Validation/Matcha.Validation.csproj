@@ -2,6 +2,14 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>1.0.1</Version>
+    <Authors>Winston Gubantes</Authors>
+    <Company>Matcha Solutions</Company>
+    <Product>Matcha.Validation</Product>
+    <Description>A plugin library for unobtrusive "Testable" validation that works well with any MVVM framework , You can create a Customized Rule which perfectly fit to your needs.</Description>
+    <PackageProjectUrl>https://github.com/winstongubantes/matcha.validation</PackageProjectUrl>
+    <RepositoryUrl />
+    <PackageReleaseNotes>Change Description</PackageReleaseNotes>
   </PropertyGroup>
 
 </Project>
