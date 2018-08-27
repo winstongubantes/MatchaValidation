@@ -1,4 +1,4 @@
-# Matcha Validation PLugin an Unobtrusive Validation for Xamarin.Forms
+# Matcha Validation Plugin an Unobtrusive Validation for Xamarin.Forms
 A plugin library for unobtrusive (pure) validation that works well with any MVVM framework  
  
  ## Preview
