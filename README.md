@@ -1,5 +1,5 @@
 # Matcha Validation Plugin an Unobtrusive Validation for Xamarin.Forms
-A plugin library for unobtrusive (pure) validation that works well with any MVVM framework  
+A plugin library for unobtrusive "Testable" validation that works well with any MVVM framework , You can create a Customized Rule which perfectly fit to your needs.
  
  ## Preview
  ![alt text](https://github.com/winstongubantes/matcha.validation/blob/master/Images/valid.gif "Sample In Action")
