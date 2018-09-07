@@ -113,3 +113,16 @@ A plugin library for unobtrusive "Testable" validation that works well with any 
 </TabbedPage>
 
  ```
+ 
+ ## Platform Supported
+
+|Platform|Version|
+| ------------------- | :-----------: |
+|Xamarin.iOS|iOS 7+|
+|Xamarin.Android|API 15+|
+|Windows 10 UWP|10+|
+|Xamarin.Mac|All|
+|Xamarin.tvOS|All|
+|Xamarin.watchOS|All|
+|.NET Standard|2.0+|
+|.NET Core|2.0+|
