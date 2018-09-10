@@ -1,10 +1,12 @@
 # Matcha Validation Plugin an Unobtrusive Validation for Xamarin.Forms
 A plugin library for unobtrusive "Testable" validation that works well with any MVVM framework , You can create a Customized Rule which perfectly fit to your needs.
  
- ## Preview
- ![alt text](https://github.com/winstongubantes/matcha.validation/blob/master/Images/valid.gif "Sample In Action")
-
+ ## Nuget
+ [Matcha.Validation](http://www.nuget.org/packages/Matcha.Validation) [![NuGet](https://img.shields.io/nuget/v/Matcha.Validation.svg?label=NuGet)](https://www.nuget.org/packages/Matcha.Validation/)
  
+ ## Preview
+  ![alt text](https://github.com/winstongubantes/matcha.validation/blob/master/Images/valid.gif "Sample In Action")
+  
  ### Get Started
  
  #### Using ValidationService
@@ -111,3 +113,16 @@ A plugin library for unobtrusive "Testable" validation that works well with any 
 </TabbedPage>
 
  ```
+ 
+ ## Platform Supported
+
+|Platform|Version|
+| ------------------- | :-----------: |
+|Xamarin.iOS|iOS 7+|
+|Xamarin.Android|API 15+|
+|Windows 10 UWP|10+|
+|Xamarin.Mac|All|
+|Xamarin.tvOS|All|
+|Xamarin.watchOS|All|
+|.NET Standard|2.0+|
+|.NET Core|2.0+|
