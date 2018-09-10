@@ -7,15 +7,18 @@ using System.Windows.Input;
 using Matcha.Validation;
 using Sample.CustomValidation;
 using Xamarin.Forms;
+using Prism.Services;
 
 namespace Sample.ViewModels
 {
 	public class PrismTabbedPageViewModel : BindableBase
 	{
 	    private ValidationService<PrismTabbedPageViewModel> _validationService;
+        private readonly IPageDialogService _pageDialogService;
 
-        public PrismTabbedPageViewModel()
+        public PrismTabbedPageViewModel(IPageDialogService pageDialogService)
         {
+            _pageDialogService = pageDialogService;
             ValidationService = new ValidationService<PrismTabbedPageViewModel>(this, true);
             EntryNotEmptyRule = ValidationService.Add(e => new IsNotNullOrEmptyRule(nameof(e.UserName)));
             EntryPassRule = ValidationService.Add(e => new StrongPasswordRule(nameof(e.Password)));
@@ -39,7 +42,7 @@ namespace Sample.ViewModels
 	    {
 	        if (ValidationService.IsValid)
 	        {
-	            Application.Current.MainPage.DisplayAlert("", "Validated", "Ok");
+	            _pageDialogService.DisplayAlertAsync("", "Validated", "Ok");
 	        }
 	    }));
 
