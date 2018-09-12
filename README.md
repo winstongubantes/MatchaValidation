@@ -4,9 +4,6 @@ A plugin library for unobtrusive "Testable" validation that works well with any 
  ## Nuget
  [Matcha.Validation](http://www.nuget.org/packages/Matcha.Validation) [![NuGet](https://img.shields.io/nuget/v/Matcha.Validation.svg?label=NuGet)](https://www.nuget.org/packages/Matcha.Validation/)
  
- ## Preview
-  ![alt text](https://github.com/winstongubantes/matcha.validation/blob/master/Images/valid.gif "Sample In Action")
-  
  ### Get Started
  
  #### Using ValidationService
@@ -113,6 +110,10 @@ A plugin library for unobtrusive "Testable" validation that works well with any 
 </TabbedPage>
 
  ```
+ 
+ ## Preview
+  ![alt text](https://github.com/winstongubantes/matcha.validation/blob/master/Images/valid.gif "Sample In Action")
+  
  
  ## Platform Supported
 
